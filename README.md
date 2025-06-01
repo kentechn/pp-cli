@@ -13,11 +13,11 @@ GitHubリポジトリでブログ記事を効率的に管理するCLIツール
 
 **完全なドキュメントは GitHub Pages で公開中:**
 
-### 🌐 [https://yourusername.github.io/prairie-post](https://yourusername.github.io/prairie-post)
+### 🌐 [https://kentechn.github.io/pp-cli](https://kentechn.github.io/pp-cli)
 
-- [使い方ガイド](https://yourusername.github.io/prairie-post/getting-started)
-- [コマンドリファレンス](https://yourusername.github.io/prairie-post/commands)  
-- [ルール・制約](https://yourusername.github.io/prairie-post/rules)
+- [使い方ガイド](https://kentechn.github.io/pp-cli/getting-started)
+- [コマンドリファレンス](https://kentechn.github.io/pp-cli/prairie-post/commands)  
+- [ルール・制約](https://kentechn.github.io/pp-cli/rules)
 
 ## 🚀 クイックスタート
 
