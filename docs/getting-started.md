@@ -14,7 +14,7 @@ title: 使い方ガイド
 ## インストール
 
 ```bash
-npm install -g prairie-post
+npm install -g pp-cli
 ```
 
 ## 基本的な使い方
@@ -31,7 +31,7 @@ pp init
 
 **生成されるファイル:**
 ```
-/docs/username/a1b2c3d4e5/
+/posts/username/a1b2c3d4e5/
 ├── a1b2c3d4e5.md    # Markdown記事
 └── meta.json        # メタデータ
 ```
@@ -40,10 +40,10 @@ pp init
 
 ```bash
 # 記事本文を編集
-vim docs/username/a1b2c3d4e5/a1b2c3d4e5.md
+vim posts/username/a1b2c3d4e5/a1b2c3d4e5.md
 
 # 画像を追加（同階層に配置）
-cp screenshot.png docs/username/a1b2c3d4e5/
+cp screenshot.png posts/username/a1b2c3d4e5/
 
 # メタデータを更新
 pp update --title "新しいタイトル" --tags "react,typescript"
@@ -72,7 +72,7 @@ pp delete .
 ## フォルダ構造
 
 ```
-/docs/
+/posts/
 └── username/             # git config user.email の@より前
     └── a1b2c3d4e5/      # 10文字のMD5ハッシュ
         ├── a1b2c3d4e5.md # Markdown記事（ファイル名変更OK）

@@ -21,7 +21,7 @@ title: ルール・制約
 ### ✅ 推奨される構造
 
 ```
-/docs/username/a1b2c3d4e5/
+/posts/username/a1b2c3d4e5/
 ├── my-article.md      # ファイル名変更OK
 ├── meta.json          # メタデータ
 ├── screenshot.png     # 画像ファイル
@@ -39,7 +39,7 @@ title: ルール・制約
 ### ❌ 禁止される構造
 
 ```
-/docs/
+/posts/
 ├── user1/
 │   └── my-folder/        # ❌ フォルダ名変更
 └── user2/
@@ -51,7 +51,7 @@ title: ルール・制約
 ### ユーザー別フォルダ
 
 ```
-/docs/
+/posts/
 ├── john/          # john@example.com → johnフォルダ
 ├── alice/         # alice@company.com → aliceフォルダ
 └── bob/           # bob.smith@org.jp → bob.smithフォルダ
@@ -81,7 +81,7 @@ const hash = crypto.createHash('md5')
 ### フォルダ構造
 
 ```
-/docs/{username}/{hash}/
+/posts/{username}/{hash}/
 ├── {hash}.md     # 初期ファイル名（変更可能）
 ├── meta.json     # メタデータ（変更禁止）
 └── *.*           # その他ファイル（自由）

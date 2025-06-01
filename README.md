@@ -44,7 +44,7 @@ pp delete {hash|.}         # 記事削除
 ## 📁 フォルダ構造
 
 ```
-/docs/
+/posts/
 └── {username}/           # git config user.email の@より前
     └── {hash}/          # 10文字のMD5ハッシュ値
         ├── {hash}.md    # Markdown記事（ファイル名変更OK）
@@ -127,6 +127,20 @@ npm run dev     # 開発モード
 npm run build   # ビルド
 npm run test    # テスト実行
 ```
+
+### アーキテクチャ
+
+```
+src/
+├── index.ts        # CLIエントリーポイント
+├── commands/       # CLIコマンド実装
+├── services/       # ビジネスロジック
+├── utils/          # ユーティリティ関数
+├── types/          # TypeScript型定義
+└── config/         # 設定定数
+```
+
+詳細なアーキテクチャ設計については、[CLAUDE.md](./CLAUDE.md) を参照してください。
 
 ## 🤝 コントリビュート
 

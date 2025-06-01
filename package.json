@@ -2,11 +2,13 @@
   "name": "pp-cli",
   "version": "1.0.0",
   "description": "GitHubリポジトリでブログ記事を効率的に管理するCLIツール",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
+  "main": "dist/index.js",
+  "bin": {
+    "pp": "./dist/index.js"
   },
   "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,8 +23,13 @@
   },
   "homepage": "https://github.com/kentechn/pp-cli#readme",
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@types/node": "^22.15.29",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0"
   }
 }

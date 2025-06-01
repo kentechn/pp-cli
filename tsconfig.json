@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ES2022" /* Node.js 18+対応 */,
+    "lib": ["ES2022"] /* 使用するライブラリ */,
+
+    /* Modules */
+    "module": "CommonJS" /* CLIツール用 */,
+    "rootDir": "./src" /* ソースディレクトリ */,
+    "moduleResolution": "node" /* Node.js解決方式 */,
+    "resolveJsonModule": true /* package.json読み込み */,
+
+    /* Emit */
+    "outDir": "./dist" /* 出力ディレクトリ */,
+    "declaration": true /* .d.tsファイル生成 */,
+    "declarationMap": true /* .d.ts.mapファイル生成 */,
+    "sourceMap": true /* デバッグ用 */,
+    "removeComments": true /* コメント削除 */,
+
+    /* Interop Constraints */
+    "esModuleInterop": true /* CommonJS互換性 */,
+    "allowSyntheticDefaultImports": true /* デフォルトインポート許可 */,
+    "forceConsistentCasingInFileNames": true /* ファイル名の大文字小文字 */,
+
+    /* Type Checking */
+    "strict": true /* 厳格モード */,
+    "noUnusedLocals": false /* 未使用変数エラー */,
+    "noUnusedParameters": false /* 未使用引数エラー */,
+    "noImplicitReturns": true /* 戻り値必須 */,
+    "noFallthroughCasesInSwitch": true /* switch文のfallthrough防止 */,
+
+    /* Completeness */
+    "skipLibCheck": true /* .d.tsファイルのチェックスキップ */
+  },
+  "include": ["src/**/*" /* srcフォルダのみ */],
+  "exclude": [
+    "node_modules" /* node_modules除外 */,
+    "dist" /* 出力フォルダ除外 */,
+    "**/*.test.ts" /* テストファイル除外 */
+  ]
+}
