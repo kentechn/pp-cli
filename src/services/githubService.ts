@@ -1,14 +1,30 @@
 import { exec } from "../utils/exec";
 import { gitService } from "./gitService";
-import { PR_BRANCH_PREFIX, DEFAULT_BRANCH } from "../config/constants";
+import { PR_BRANCH_PREFIX, DEFAULT_BRANCH, DOCS_DIR } from "../config/constants";
 import { logger } from "../utils/logger";
 
 export async function createPullRequest(): Promise<void> {
-  // Check if there are any changes
+  // Check if there are any changes and commit them
   const hasChanges = await gitService.hasChanges();
   if (hasChanges) {
-    logger.warning("未コミットの変更があります。先にコミットしてください。");
-    process.exit(1);
+    logger.info("変更を確認しています...");
+    
+    // Get status to show what will be committed
+    const { stdout: statusOutput } = await exec("git status --porcelain");
+    const changedFiles = statusOutput.trim().split('\n').filter(line => line.length > 0);
+    
+    logger.info("以下のファイルをコミットします:");
+    changedFiles.forEach(file => {
+      console.log(`  ${file}`);
+    });
+    
+    // Add only posts directory changes
+    logger.info("変更をステージングしています...");
+    await gitService.add([DOCS_DIR]); // postsディレクトリのみをステージ
+    
+    // Commit with a descriptive message
+    logger.info("変更をコミットしています...");
+    await gitService.commit("記事の更新");
   }
 
   // Get current branch

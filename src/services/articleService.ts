@@ -39,10 +39,6 @@ export async function createArticle(
   const markdownPath = path.join(articleDir, `${hash}.md`);
   const markdownContent = `# ${metadata.title}\n\n<!-- 記事の内容をここに書いてください -->\n`;
   await fileManager.writeFile(markdownPath, markdownContent);
-  
-  // Git add and commit
-  // await gitService.add([articleDir]);
-  // await gitService.commit(`記事を作成: ${metadata.title}`);
 }
 
 export async function updateArticle(
