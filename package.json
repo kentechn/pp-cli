@@ -1,0 +1,28 @@
+{
+  "name": "pp-cli",
+  "version": "1.0.0",
+  "description": "GitHubリポジトリでブログ記事を効率的に管理するCLIツール",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kentechn/pp-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kentechn/pp-cli/issues"
+  },
+  "homepage": "https://github.com/kentechn/pp-cli#readme",
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
