@@ -41,8 +41,8 @@ export async function createArticle(
   await fileManager.writeFile(markdownPath, markdownContent);
   
   // Git add and commit
-  await gitService.add([articleDir]);
-  await gitService.commit(`記事を作成: ${metadata.title}`);
+  // await gitService.add([articleDir]);
+  // await gitService.commit(`記事を作成: ${metadata.title}`);
 }
 
 export async function updateArticle(
